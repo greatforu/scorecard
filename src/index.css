@@ -9,7 +9,7 @@ header {
 }
 
 .header-text {
-    color: aqua
+    color: rgba(31, 205, 211, 0.76)
 }
 
 header>img {
@@ -24,7 +24,7 @@ header>img {
     height: 500px;
     display: flex;
     align-items: center;
-    background: #F3B16A;
+    background: #FFFFFF;
     /* background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  
     background: linear-gradient(to right, #2a0845, #6441A5);  */
     font-size: 20px;
