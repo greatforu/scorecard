@@ -31,7 +31,7 @@ class Today extends React.Component {
                    
 
                     <h2>Match {ind + 1}</h2>
-                    <p key={ind}>{today[val]["Past"]}</p>
+                    <p key={ind}>{today[val]}</p>
                 </div>
             ))}
             </div>

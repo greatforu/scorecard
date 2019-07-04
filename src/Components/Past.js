@@ -31,7 +31,7 @@ class Past extends React.Component {
                 <div key={ind}>
                    
                     <h2>Match {ind + 1}</h2>
-                    <p key={ind}>{past[val]["Past"]}</p>
+                    <p key={ind}>{past[val]}</p>
                 </div>
             ))}
 

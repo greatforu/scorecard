@@ -30,7 +30,7 @@ class Upcoming extends React.Component{
                 <div key={ind}>
                     
                     <h2>Match {ind + 1}</h2>
-                    <p key={ind}>{upcoming[val]["Upcoming"]}</p>
+                    <p key={ind}>{upcoming[val]}</p>
                 </div>
               ))}
 
