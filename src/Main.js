@@ -1,16 +1,19 @@
 import React from "react"
-import Past from "./Components/Past"
+
 
 class Main extends React.Component {
     constructor() 
     {
          super()
+         this.state = {
+             country: 1
+         }
            
     }
     render() {
             
         return (
-            <div><h1>Hi</h1></div>
+            <div></div>
 
            
         )

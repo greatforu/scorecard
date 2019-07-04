@@ -1,5 +1,5 @@
-import React from "./react"
-import firebase from "./firebase"
+import React from "react"
+import * as firebase from 'firebase';
 
 class Upcoming extends React.Component{
 
@@ -12,24 +12,29 @@ class Upcoming extends React.Component{
     componentDidMount() {
 
         const rootRef = firebase.database().ref();
-        const twoRef = rootRef.child('matches').child('Upcoming');
-        twoRef.on('value', snap => {
+        const threeRef = rootRef.child('matches').child('Upcoming');
+        threeRef.on('value', snap => {
             this.setState({
-                today: snap.val()
+                upcoming: snap.val()
             });
             console.log(this.state.upcoming);
         });
     }
     render(){
+        let {upcoming} = this.state
         return(
-            Object.keys(matches[Upcoming]).map((val, ind) => (
-                <div>
-                      <h1>Match {ind + 1}</h1>
-                      <p>{val}</p>
-                      <p>{matches["Upcoming"]}</p>
-  
+
+            <div>
+                <h1>Upcoming Matches</h1>
+            {Object.keys(upcoming).map((val, ind) => (
+                <div key={ind}>
+                    
+                    <h2>Match {ind + 1}</h2>
+                    <p key={ind}>{upcoming[val]["Upcoming"]}</p>
                 </div>
-              ))
+              ))}
+
+              </div>
         )
     }
 }

@@ -1,14 +1,14 @@
-import React from "./react"
-import firebase from "./firebase"
+import React from "react"
+import * as firebase from 'firebase';
 
-class Today extends React.Component{
+class Today extends React.Component {
 
-    constructor(){
+    constructor() {
         super()
         this.state = {
             today: []
+        }
     }
-}
     componentDidMount() {
 
         const rootRef = firebase.database().ref();
@@ -20,16 +20,21 @@ class Today extends React.Component{
             console.log(this.state.today);
         });
     }
-    render(){
-        return(
-            Object.keys(matches[Past]).map((val, ind) => (
-                <div>
-                      <h1>Match {ind + 1}</h1>
-                      <p>{val}</p>
-                      <p>{matches["Past"]}</p>
-  
+    render() {
+        let { today } = this.state
+        return (
+ 
+               <div>            
+            <h1>Today Matches</h1>
+         {   Object.keys(today).map((val, ind) => (
+                <div key={ind}>
+                   
+
+                    <h2>Match {ind + 1}</h2>
+                    <p key={ind}>{today[val]["Past"]}</p>
                 </div>
-              ))
+            ))}
+            </div>
         )
     }
 }

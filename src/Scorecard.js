@@ -49,7 +49,9 @@ class Scorecard extends React.Component {
                                 <td>Status</td>
                             </tr>
                             {
-                                Object.keys(country[selected]).filter((val) => (val !== "Extras" && val !== "Total Score")).map((val, ind) => (
+                                Object.keys(country[selected]).filter(
+                                    (val) => (val !== "Extras" && val !== "Total Score")).map(
+                                        (val, ind) => (
                                     <tr key={ind}>
                                         <td>{ind + 1}</td>
                                         <td>{val}</td>
